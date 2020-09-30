@@ -1,0 +1,436 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    /* font-size: 18px; */
+}
+
+/* .application {
+    background-color: #c7ddd1;
+    color: #001f1e;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+} */
+
+/* .header {
+    height: 70px;
+    border-bottom: 1px whitesmoke solid;
+} */
+header {
+    box-sizing: border-box;
+    background-color: black;
+    border-bottom: 1px white solid;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.444em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.small-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    object-fit: cover;
+    margin: 0;
+}
+
+.menu-link {
+    display: flex;
+    cursor: pointer;
+}
+
+.small-container {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 100px;
+    top: 30px;
+    border-radius: 50%;
+}
+
+.small-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.arrow {
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top: 45px;
+}
+
+.arrow img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu-container {
+    position: fixed;
+    right: 0;
+    top: 100px;
+    max-height: 220px;
+    overflow: hidden;
+}
+
+.menu {
+    padding: 0.444em 1em;
+    background-color: black;
+    height: 100%;
+    overflow: hidden;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.menu.opened {
+    transform: translate(0, 0%);
+}
+
+.menu.closed {
+    transform: translate(0, -100%);
+}
+
+.menu-anchor,
+.menu-anchor:link,
+.menu-anchor:visited {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menu-anchor:hover {
+    text-decoration: none;
+}
+
+.find-people {
+    position: absolute;
+    right: 190px;
+    top: 30px;
+}
+
+.chat {
+    position: absolute;
+    right: 150px;
+    top: 30px;
+}
+
+.friends {
+    position: absolute;
+    right: 90px;
+    top: 30px;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+}
+
+input {
+    background-color: black;
+}
+
+.upload-container {
+    padding-left: 50px;
+}
+
+.upload-container input {
+    margin: 5px;
+}
+
+.findpeople-container {
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.profile-container {
+    padding-left: 150px;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.find-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.find-container img {
+    width: 100px;
+    height: 100px;
+}
+
+.bio-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 20px;
+    align-content: space-around;
+}
+
+.bio-button {
+    display: flex;
+    align-self: flex-start;
+    /* position: absolute; */
+}
+
+.textarea {
+    border: 1px white solid;
+    border-radius: 10px;
+}
+
+.chat-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.chat-messages-container {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 300px;
+    width: 50%;
+    overflow-y: scroll;
+    border: 1px white solid;
+    border-radius: 25px;
+    box-shadow: white;
+}
+
+.chat-messages-container textarea {
+    height: 100px;
+}
+
+#chat-text {
+    width: 50%;
+}
+
+.message-pic img {
+    border-radius: 50%;
+}
+.message {
+    padding-left: 20px;
+}
+
+.friends-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.real-friends {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 80%;
+    overflow-x: scroll;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.wannabe-friends {
+    display: flex;
+    flex-direction: rows;
+    height: 200px;
+    width: 80%;
+    overflow-x: scroll;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.friends-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.friends-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.message-pic img {
+    width: 50px;
+    height: 50px;
+}
+
+.reg-container {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    /* border: 2px black solid; */
+    border-radius: 25px;
+}
+
+.reg-container input {
+    margin: 10px;
+    border: none;
+    border-bottom: 1px white solid;
+    justify-items: center;
+}
+
+.reg-button {
+    font-size: 15px;
+    /* padding-bottom: 20px; */
+}
+
+.login {
+    position: absolute;
+    right: 100px;
+    top: 45px;
+}
+
+.login-main-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    float: right;
+    top: 30px;
+    right: 100px;
+}
+
+.login-container input {
+    margin: 5px;
+    border: none;
+    border-bottom: 1px white solid;
+}
+
+.forget {
+    font-size: 15px;
+    float: right;
+}
+
+.reset-container {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    /* border: 2px black solid; */
+    border-radius: 25px;
+}
+
+.reset-container input {
+    margin: 5px;
+}
+
+.spotify-search {
+    position: absolute;
+    color: color;
+    border-bottom: 1px white solid;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spotify-main-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    /* padding-right: 100px; */
+    top: 190px;
+    left: 100px;
+    width: 80%;
+    overflow-x: scroll;
+}
+
+.spotify-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: left;
+    width: 100%;
+    left: 20px;
+}
+.spotify-results-container img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.youtube-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+    justify-items: center;
+    position: absolute;
+    top: 500px;
+    overflow-y: scroll;
+}
+
+/* .upload-container {
+    width: 400px;
+    height: 300px;
+    background-color: yellowgreen;
+    border: darkolivegreen;
+    border-radius: 25px;
+} */
