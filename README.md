@@ -1,10 +1,10 @@
-# f.y.m.
+# F.Y.M.
 
-### Desciption
+### Description
 
-This was my final profject at Spiced Academy. F. Y. M. stands for Find Your Music. 
+This was my final project at Spiced Academy. F. Y. M. stands for Find Your Music. 
 
-The user get recommendations by new releases from a randomly choosen country from the Spotify API. 
+The user get recommendations by new releases from a randomly chosen country from the Spotify API. 
 
 When the image of an artist gets clicked, the Youtube videos from that artist get rendered on the same page.
 

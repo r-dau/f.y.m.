@@ -471,7 +471,6 @@ app.get("/youtube/:name", (req, res) => {
         if (error) {
             console.log(error);
         } else {
-            // console.log(JSON.stringify(result, null, 2));
             res.json(result.items);
         }
     });
